@@ -40,7 +40,7 @@ function App() {
            <div><a href="https://etherscan.io/address/0x0b997D2D69cb2186b21a5fC92A2C8850609e8e76">0x0b997D2D69cb2186b21a5fC92A2C8850609e8e76</a></div>
          </div>
 
-         <div className="title">Teens Ape Club</div>
+         <div className="title">Teens Ape</div>
           <div className="globle publicSale">PUBLIC SALE</div>
           <div className="globle">MAX PER WALLET: 2</div>
 
@@ -60,7 +60,7 @@ function App() {
           <div className="mintButton"><span>MINT</span></div>
    
             <div className="globle">CONGRATS! YOU HAVE MINTED: 1</div>
-            <div className="globle alert">SORRY, YOU ALREADY MINTED: 2 TEENS APE CLUB.</div>
+            <div className="globle alert">SORRY, YOU ALREADY MINTED: 2 TEENS APE.</div>
 
 
 
