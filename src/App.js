@@ -40,7 +40,7 @@ function App() {
            <div><a href="https://etherscan.io/address/0x0b997D2D69cb2186b21a5fC92A2C8850609e8e76">0x0b997D2D69cb2186b21a5fC92A2C8850609e8e76</a></div>
          </div>
 
-         <div className="title">Teens Apes</div>
+         <div className="title">TEENS APES</div>
           <div className="globle publicSale">PUBLIC SALE</div>
           <div className="globle">MAX PER WALLET: 2</div>
 
