@@ -1,23 +1,84 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {useState} from 'react';
 function App() {
+
+  const [price, setprice] = useState("0.5");
+  const [counter, setcounter] = useState("1");
+  const [minus, setminus] = useState("disabledButton");
+  const [plus, setplus] = useState("");
+
+  let minusClicked = () =>{
+    setminus("disabledButton");
+    setplus("");
+    setprice("0.5");
+    setcounter("1");
+
+  }
+
+
+  let plusClicked = () =>{
+    setminus("");
+    setplus("disabledButton");
+    setprice("0.10");
+    setcounter("2");
+
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="logo"><img src="/images/logo.png" alt="logo" /></div>
+
+
+    <div className="mainFlex">
+      <div className="monkey">
+          <img src="/images/monkey.png" alt="monkey" />
+      </div>
+
+       <div className="text">
+         <div className="connection">
+           <p>CONNECTED AS:</p>
+           <div>0x1283971289371892378998123891289312893</div>
+         </div>
+
+         <div className="title">CYBER LEGENDS</div>
+          <div className="globle publicSale">PUBLIC SALE</div>
+          <div className="globle">MAX PER WALLET: 2</div>
+
+
+          <div className="functionFlex">
+            <div className="grid">
+                <div className={`action minus ${minus}`} onClick={minusClicked}><span>-</span></div>
+                <div className="number">{counter}</div>
+                <div className={`action plus ${plus}`} onClick={plusClicked}><span>+</span></div>
+
+            </div>
+
+            <div className="price"><span>{price}</span> <div>ETH</div></div>
+            
+          </div>
+
+          <div className="mintButton"><span>MINT</span></div>
+   
+            <div className="globle">CONGRATS! YOU HAVE MINTED: 1</div>
+            <div className="globle alert">SORRY, YOU ALREADY MINTED 2 CYBER LEGENDS.</div>
+
+
+
+           <div className="mintPaused"><i class="fas fa-pause-circle"></i><span>MINT IS PAUSED</span></div>
+
+
+
+
+
+
+
+       </div>
+      
+    </div>
+
+
+
+
     </div>
   );
 }
