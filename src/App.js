@@ -1,25 +1,91 @@
 import {useState} from 'react';
 function App() {
 
-  const [price, setprice] = useState("0.5");
+  const [price, setprice] = useState("0.10");
   const [counter, setcounter] = useState("1");
   const [minus, setminus] = useState("disabledButton");
   const [plus, setplus] = useState("");
 
   let minusClicked = () =>{
-    setminus("disabledButton");
-    setplus("");
-    setprice("0.5");
-    setcounter("1");
+  
+   
+    if(counter == "5"){
+      setcounter("4");
+      setprice("0.40");
+      setplus("");
+      }
+  
+  
+  
+      if(counter == "4"){
+        setcounter("3");
+        setprice("0.30");
+        setplus("");
+        }
+  
+  
+  
+        if(counter == "3"){
+          setcounter("2");
+          setprice("0.20");
+          setplus("");
+          }
+  
+  
+          if(counter == "2"){
+            setcounter("1");
+            setprice("0.10");
+            setplus("");
+            setminus("disabledButton");
+
+            }
+  
+  
+              
 
   }
 
 
   let plusClicked = () =>{
-    setminus("");
-    setplus("disabledButton");
-    setprice("0.10");
-    setcounter("2");
+   
+    if(counter == "1"){
+      setminus("");
+      setprice("0.20");
+      setcounter("2");
+  
+    }
+
+
+    if(counter == "2"){
+      setminus("");
+      setprice("0.30");
+      setcounter("3");
+  
+    }
+
+
+
+    if(counter == "3"){
+      setminus("");
+      setprice("0.40");
+      setcounter("4");
+  
+    }
+
+
+
+    if(counter == "4"){
+      setminus("");
+      setplus("disabledButton");
+      setprice("0.50");
+      setcounter("5");
+  
+    }
+
+
+
+
+
 
 
   }
@@ -42,7 +108,7 @@ function App() {
 
          <div className="title">TEENS APES</div>
           <div className="globle publicSale">PUBLIC SALE</div>
-          <div className="globle">MAX PER WALLET: 2</div>
+          <div className="globle">MAX PER WALLET: 5</div>
 
 
           <div className="functionFlex">
@@ -60,7 +126,7 @@ function App() {
           <div className="mintButton"><span>MINT</span></div>
    
             <div className="globle">CONGRATS! YOU HAVE MINTED: 1</div>
-            <div className="globle alert">SORRY, YOU ALREADY MINTED: 2 TEENS APES.</div>
+            <div className="globle alert">SORRY, YOU ALREADY MINTED: 5 TEENS APES.</div>
 
 
 
